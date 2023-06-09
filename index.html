@@ -39,7 +39,7 @@
             </a>
         </div>
         <div class="menuBar" id="menubar">
-            <img src="Images/menubar.jpg" alt="">
+            <img src="Images/menubar.jpg" alt="" id="menuimg">
         </div>
     </navbar>
 
@@ -49,7 +49,7 @@
             <div class="leftCol">
                 <p class="welcomeText">Welcome To My World</p>
                 <p class="nameText">Hi, I'm Rishabh <span style="color:#E70280">Kumrawat</span></p>
-                <p class="professionText">Web Developer</p>
+                <p class="professionText" id="professionText">Web Developer</p>
                 <a href="#">
                     <div class="cvBtn">
                         Download CV
@@ -79,6 +79,8 @@
             </div>
         </div>
     </section>
+
+
 
 
     <!-- *****||||||ABOUT|||||||***** -->
@@ -120,7 +122,8 @@
             <div class="project_row">
                 <div class="project_col">
                     <p class="project_name">Food Delivery App</p>
-                    <p class="project_description">Food Delivery App is a website through which user can create and login to their
+                    <p class="project_description">Food Delivery App is a website through which user can create and
+                        login to their
                         account and can order menu items. It also has admin panel and user DashBoard</p>
                     <p class="project_tech"><span>Technology</span>: HTML, CSS, JavaScript, NodeJs, MongoDB</p>
                     <div class="project_btns">
@@ -135,9 +138,10 @@
                 </div>
                 <div class="project_col">
                     <p class="project_name">Weather App</p>
-                    <p class="project_description">Weather App shows the weather of any city in the world. User can search weather of
+                    <p class="project_description">Weather App shows the weather of any city in the world. User can
+                        search weather of
                         their city.
-                        </p>
+                    </p>
                     <p class="project_tech"><span>Technology</span>: HTML, CSS, JavaScript,OpenWeather API</p>
                     <div class="project_btns">
                         <div class="live_btn">
@@ -180,11 +184,11 @@
                     <div class="techDetail">
                         <div>
                             HTML
-                            <img src="Images/w3_html5-icon.svg" alt="">
+                            <img src="Images/html5-icon.svg" alt="">
                         </div>
                         <div>
                             CSS
-                            <img src="Images/w3_css-icon.svg" alt="">
+                            <img src="Images/css3-icon.svg" alt="">
                         </div>
                         <div>
                             JavaScript
@@ -201,7 +205,7 @@
                     <div class="techDetail">
                         <div>
                             NodeJs
-                            <img src="Images/nodejs1.jpg" alt="" class='big'>
+                            <img src="Images/nodejs-icon.jpg" alt="" class='big'>
                         </div>
                         <div>
                             ExpressJs
@@ -227,7 +231,7 @@
                     <div class="techDetail">
                         <div>
                             Git
-                            <img src="Images/git-scm-icon.svg" alt="">
+                            <img src="Images/gitIcon.svg" alt="">
                         </div>
                         <div>
                             GitHub
@@ -251,32 +255,33 @@
             <p class="contactPara">Get In Touch With Me</p>
             <div class="contactRow">
                 <div class="formBox">
-                    <form action="">
+                    <form action="" id="contactform">
                         <div class="row50">
                             <div class="nameInput">
-                                <input type="text" class="name" placeholder="Name">
+                                <input type="text" name="name" placeholder="Name" autocomplete="off" required>
                             </div>
                             <div class="emailInput">
-                                <input type="email" class="email" placeholder="Email">
+                                <input type="email" name="email" placeholder="Email" autocomplete="off" required>
                             </div>
                             <div class="numberInput">
-                                <input type="number" class="number" placeholder="Number">
+                                <input type="number" name="contact" placeholder="Number" autocomplete="off" >
                             </div>
                             <div class="subjectInput">
-                                <input type="text" class="subject" placeholder="Subject">
+                                <input type="text" name="subject" placeholder="Subject" autocomplete="off" >
                             </div>
                         </div>
                         <div class="row100">
-                            <input type="text" class="message" placeholder="Message">
+                            <input type="text" class="message" name='message' placeholder="Message" autocomplete="off" required>
                         </div>
 
-                        <div class="row100 submitBtn">
-                            <input type="submit" value="Send">
+                        <div class="row100 submitBtn" id="submitbtn">
+                            <!-- <input type="submit" value="Send"> -->
+                            Send
                             <img src="Images/paperPlane.svg" alt="">
                         </div>
 
                         <div class="mail">
-                            <img src="Images/envelope-svgrepo-com.svg" alt="">
+                            <img src="Images/mailIcon.svg" alt="">
                             <p>rishabhkumrawat40@gmail.com</p>
                         </div>
                     </form>
@@ -285,50 +290,8 @@
         </div>
     </section>
 
-    <script>
-        const honors = document.getElementsByClassName("honorscol");
-
-        const buttonPressed = e => {
-            const id = e.target.id;
-            const ulList = document.getElementById('honorsList');
-            if (id == "skill") {
-                const html = `<li class="liItem"><span>Core Java</span></li>
-                        <li class="liItem">Web Development</li>
-                        <li class="liItem">Data Structures & Algorithm</li>`
-                ulList.innerHTML = html;
-
-            } else if (id == 'education') {
-                const html = `<li class="liItem"><div class='degree'>B-tech in Computer Science</div>
-                                                <div class='institute'>IPS Academy, Indore</div>
-                                                <div class='grade'>2021-2025 || <span>CGPA: 9+</span></div></li>
-                        <li class="liItem"><div class='degree'>Class XII</div>
-                                           <div class='institute'>Shiva Academy, Betma</div>
-                                           <div class='grade'>2020-2021 || <span>Percentage:94.4%</span></div></li>
-                        <li class="liItem"><div class='degree'>Class X</div>
-                                                <div class='institute'>Shiva Academy, Betma</div>
-                                                <div class='grade'>2018-2019 || <span>Percentage:93.6%</span></div></li>`
-                ulList.innerHTML = html;
-            } else {
-                const html = `<li class="liItem">Leetcode contest rating 1750+</li>
-                        <li class="liItem">500+ questions on leetcode</li>
-                        <li class="liItem">800+ questions on geeksforgeeks</li>
-                        <li class="liItem">HackerRank 5⭐ in Java</li>`
-                ulList.innerHTML = html;
-            }
-        }
-
-        for (let honor of honors) {
-            honor.addEventListener("click", buttonPressed);
-        }
-    </script>
-    <script>
-        const menubar = document.getElementById('menubar');
-        menubar.addEventListener('click',()=>{
-            var navlist = document.getElementById('navlist');
-            navlist.classList.toggle('active');
-        })
-    </script>
-
+    <script src="index.js"></script>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
